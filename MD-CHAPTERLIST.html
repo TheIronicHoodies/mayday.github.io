@@ -1,0 +1,414 @@
+<html>
+    <head>
+        <title>Mayday: Chapter List</title>
+        <style>
+            .sidebar {
+                height: 100%;
+                width: 305px;
+                position: fixed;
+                z-index: 1;
+                top: 50px;
+                left: -295px;
+                background-color: #000;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 50px;
+                border-top: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                border-radius: 0 10px 10px 0;
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .sidebar a {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+                display: block;
+                padding: 10px;
+                text-align: right;
+            }
+            .sidebar a:link {
+                text-decoration: none;
+            }
+            .sidebar a:visited {
+                color: #0ff;
+                text-decoration: none;
+            }
+            .sidebar:hover {
+                left: 0px;
+            }
+            .sidebar .sidebuttons {
+                border-top: 1px solid #0ff;
+                border-bottom: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                outline: #000 solid 5px;
+                width: 250px;
+            }
+            .titlebox {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+                text-align: center;
+                border-bottom: 2px solid #0ff;
+                padding: 20px;
+            }
+            .countdownTimer {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 60px;
+                display: inline;
+            }
+            .transmission {
+                color: #0ff;
+                font-style: italic;
+                font-family: 'Courier New', Courier, monospace;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            .message {
+                color: #fff;
+                font-family: 'Courier New', Courier, monospace;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+            .buttonContainer {
+                float: right;
+                padding-top: 20px;
+                padding-right: 75px;
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .buttonContainer button {
+                border: 1px solid #0ff;
+                border-radius: 5px;
+                background-color: #000;
+                color: inherit;
+                font-family: inherit;
+                font-size: 24px;
+                padding: 10px;
+                width: 50px;
+                cursor: pointer;
+            }
+            .buttonContainer button.active {
+                background-color: #0ff;
+                color: #000;
+            }
+            .chapters {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                width: 75%;
+                position: absolute;
+            }
+            .title {
+                height: 50px;
+                width: inherit;
+                color: #0ff;
+                font-size: 36px;
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #0ff;
+            }
+            #list {
+                left: 20%
+            }
+            #list table {
+                border: 1px solid #0ff;
+                border-collapse: collapse;
+            }
+            #list table tr {
+                height: 30px;
+            }
+            #list a {
+                font-size: 18px;
+                padding: 15px;
+                display: inline-block;
+            }
+            #list a:link {
+                color: #0ff;
+            }
+            #list a:visited {
+                color: #0ff;
+                font-weight: bold;
+            }
+            #list a:hover {
+                color: #fff;
+            }
+            #grid {
+                left: 17.5%;
+            }
+            #grid a {
+                font-size: 16px;
+                text-decoration: none;
+            }
+            #grid a:link {
+                color: #0ff;
+            }
+            #grid a:visited {
+                color: #0ff;
+            }
+            #grid a:hover {
+                color: #fff;
+            }
+            .icon {
+                width: 16.66%;
+                padding-top: 50px;
+            }
+            .image {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50px;
+                align-self: center;
+            }
+            .filename {
+                text-align: center;
+            }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body style="background-color: #000">
+        <!--The sidebar-->
+        <div class="sidebar" id="sidemenu">
+            <div id="sideicons">
+                <h1 style="text-align: center">Menu</h1>
+                <a href="MD-HOME.html" class="sidebuttons">Home</a>
+                <br>
+                <a href="MD-CHAPTERLIST.html" class="sidebuttons">Chapters</a>
+                <br>
+                <a href="MD-BLOG.html" class="sidebuttons">Blog / Updates</a>
+                <br>
+                <a href="MD-CHARPROF.html" class="sidebuttons">Crewmate Database</a>
+                <br>
+                <a href="MD-CREDITS.html" class="sidebuttons">Credits</a>
+            </div>
+        </div>
+
+        <!--The title/header.-->
+        <div class="titlebox">
+            <br><br><br><br>
+            <div class="countdownTimer">
+                <b>
+                <span id="days"></span>
+                <span id="hours"></span>
+                <span id="minutes"></span>
+                <span id="seconds"></span>
+                </b>
+            </div>
+            <br><br>Time until next chapter release
+        </div>
+
+        <br>
+
+        <div>
+            <p class="transmission">TRANSMISSION_ID: #A-2020-E-194836-01-05-60-000C4672E</p>
+            <p class="message">Greetings, end user. Here is the repository for uploaded chapters. You may sort them by list or by grid by clicking the buttons on the top right of the panel.</p>
+        </div>
+
+        <!--Sort by alphabetical list/grid view-->
+        <div class="buttonContainer">
+            <button class="sortBtn" onclick="openProfile(event,'list')" id="defaultOpen"><i class="fa fa-list"></i></button>
+            <button class="sortBtn" onclick="openProfile(event,'grid')"><i class="fa fa-th-large"></i></button>
+        </div>
+
+        <br><br><br><br><br>
+
+        <div id="list" class="chapters">
+            <!--Prologue-->
+            <table width="80%">
+                <tr>
+                    <th class="title">PROLOGUE</th>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="The Prologue.html">The Prologue</a>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Athlete-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE ATHLETE</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Captain-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE CAPTAIN</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Chef-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE CHEF</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Detective-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE DETECTIVE</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Doctor-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE DOCTOR</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Economist-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE ECONOMIST</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Engineer-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE ENGINEER</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Journalist-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE JOURNALIST</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Musician-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE MUSICIAN</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Pilot-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE PILOT</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Professor-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE PROFESSOR</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+
+            <br><br>
+
+            <!--The Soldier-->
+            <table width="80%">
+                <tr>
+                    <th class="title">THE SOLDIER</th>
+                </tr>
+                <tr>
+                    <td>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    
+        <div id="grid" class="chapters">
+            <table width="90%">
+                <tr>
+                    <td class="icon">
+                        <a href="The Prologue.html">
+                            <img src="The Folder-1.png" class="image">
+                            <p class="filename">The Prologue</p>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <script src="sidebar.js"></script>
+
+        <script src="countdown.js"></script>
+    </body>
+</html>

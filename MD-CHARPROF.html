@@ -1,0 +1,1587 @@
+<html>
+    <head>
+        <title>
+            Mayday: Crewmate Database
+        </title>
+        <style>
+            .sidebar {
+                height: 100%;
+                width: 305px;
+                position: fixed;
+                z-index: 1;
+                top: 50px;
+                left: -295px;
+                background-color: #000;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 50px;
+                border-top: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                border-radius: 0 10px 10px 0;
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .sidebar a {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+                display: block;
+                padding: 10px;
+                text-align: right;
+            }
+            .sidebar a:link {
+                text-decoration: none;
+            }
+            .sidebar:hover {
+                left: 0px;
+            }
+            .sidebar .sidebuttons {
+                border-top: 1px solid #0ff;
+                border-bottom: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                outline: #000 solid 5px;
+                width: 250px;
+            }
+            .titlebox {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+                text-align: center;
+                border-bottom: 2px solid #0ff;
+            }
+            .mainbody {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 18px;
+                padding-top: 50px;
+            }
+            .transmission {
+                color: #0ff;
+                font-style: italic;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            .message {
+                color: #fff;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+            .tab {
+                border-collapse: collapse;
+                left: 50%;
+                transform:translateX(-50%);
+                -ms-transform: translateX(-50%);
+                position: absolute;
+            }
+            .tab button {
+                background-color: #000;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #0ff;
+                outline: #000, solid, 5px;
+                cursor: pointer;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 18px;
+                color: #0ff;
+            }
+            .tab button:hover {
+                color: #fff;
+            }
+            .tab button.active {
+                color: #000;
+                background-color: #0ff;
+            }
+            .tabcontent {
+                border-collapse: collapse;
+            }
+            .tabcontent td {
+                border-collapse: collapse;
+                height: 25px;
+                padding: 5px;
+            }
+            .table {
+                position: relative;
+                table-layout: fixed;
+                margin-left: auto;
+                margin-right: auto;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+            .table td {
+                height: 25px;
+                padding: 5px;
+            }
+            .header {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                padding: 10px;
+                text-align: left;
+                border: 1px solid #0ff;
+            }
+            .descriptionHead {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #0ff;
+            }
+            .description {
+                color: #fff;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .descriptor {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                border: 1px solid #0ff;
+            }
+            .data {
+                color: #fff;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .imagebox {
+                border: 1px solid #0ff;
+                width: 375px;
+            }
+            .statusA {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                text-align: center;
+                border-style: hidden;
+            }
+        </style>
+    </head>
+    <body style="background-color: #000">
+        <!--The sidebar-->
+        <div class="sidebar" id="sidemenu">
+            <div id="sideicons">
+                <h1 style="text-align: center">Menu</h1>
+                <a href="MD-HOME.html" class="sidebuttons">Home</a>
+                <br>
+                <a href="MD-CHAPTERLIST.html" class="sidebuttons">Chapters</a>
+                <br>
+                <a href="MD-BLOG.html" class="sidebuttons">Blog / Updates</a>
+                <br>
+                <a href="MD-CHARPROF.html" class="sidebuttons">Crewmate Database</a>
+                <br>
+                <a href="MD-CREDITS.html" class="sidebuttons">Credits</a>
+            </div>
+        </div>
+
+        <!--The title/header.-->
+        <div class="titlebox">
+            <br><br><br><br>
+            <h1>Crewmate Database</h1>
+        </div>
+
+        <div class="mainbody">
+            <p class="transmission"><i>TRANSMISSION_ID: #A-2020-E-153028-01-05-60-0009AB33</i></p>
+            <p class="message">Greetings, end user.</p>
+            <p class="message">It appears that the ARK-2020's crew database has been irreversibly damaged, and much data has been lost. We are unable to identify the cause. However should any data, old or new, be revealed to you, this database will be updated as soon as possible.</p>
+            <p class="message">In the meanwhile, this is what remains of the crew database:</p>
+        </div>
+
+        <br>
+
+        <!--Navigation buttons-->
+        <div class="tab">
+            <button class="tablinks" onclick="openProfile(event,'The Athlete')" id="defaultOpen">01</button>
+            <button class="tablinks" onclick="openProfile(event,'The Captain')">02</button>
+            <button class="tablinks" onclick="openProfile(event,'The Chef')">03</button>
+            <button class="tablinks" onclick="openProfile(event,'The Detective')">04</button>
+            <button class="tablinks" onclick="openProfile(event,'The Doctor')">05</button>
+            <button class="tablinks" onclick="openProfile(event,'The Economist')">06</button>
+            <button class="tablinks" onclick="openProfile(event,'The Engineer')">07</button>
+            <button class="tablinks" onclick="openProfile(event,'The Journalist')">08</button>
+            <button class="tablinks" onclick="openProfile(event,'The Musician')">09</button>
+            <button class="tablinks" onclick="openProfile(event,'The Pilot')">10</button>
+            <button class="tablinks" onclick="openProfile(event,'The Professor')">11</button>
+            <button class="tablinks" onclick="openProfile(event,'The Soldier')">12</button>
+        </div>
+
+        <br><br><br>
+
+        <!--Crewmate data - Athlete-->
+        <div id="The Athlete" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Athlete.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Athlete
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        16
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        November 17
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        F
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        4'10" (147 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        45.4 kg (100 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        O+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>"To carry the crew's heavy loads, and to perform all labor-intensive tasks with my gift of strength and restlessness."</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The Athlete has a multitude of jobs — some of these include cleaning, gardening, laundry, and other tasks that require heavylifting. She only gets Sundays off. Nonetheless, befitting her title, it seems she barely ever gets tired.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Captain-->
+        <div id="The Captain" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Captain.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Captain
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        69
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        May 26
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        M
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        5'7.5" (171 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        61.5 kg (135 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        O+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The Captain has a simple duty: To lead the last of humanity.</p> 
+                        <p>After everything our species has been through, law and order is the most important thing to uphold. He's responsible for giving everyone the "names" he has now: "The Doctor", "The Detective", "The Musician" — you name it. It's meant to them in a worker's mentality. It seems not everybody is happy, but no matter — The Captain has the final say.</p>
+                        <p>Luckily, at the ripe age of 69, there's not much left to do. He's seen everything, and he's long past bearing children. Besides his duty as The Captain, what else, indeed, is he good for?</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Chef-->
+        <div id="The Chef" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Chef.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Chef
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        18
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        May 14
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        F
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        4'9" (145 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        44.9 kg (99 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        A+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        Recovering from poisoning
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>Though the Chef only works thrice a day, she takes on one of the most important jobs on board. She has a sweet and innocent aura that charms and pleases everyone.</p> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Detective-->
+        <div id="The Detective" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Detective.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Detective
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        46
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        December 15
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        M
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        5'7" (170 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        60.0 kg (132 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        A+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The Detective works the least of everyone, as he is only required when certain... conflicts arise on board. Otherwise, he's most often seen lounging in the common room. But don't mistake it for slacking off — he's a prodigious man who likes to help around in the littlest ways he can. For the younger crew members, he's also the sort to give words of advice, and educate them on things that even the Professor won't speak about...</p> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Doctor-->
+        <div id="The Doctor" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Doctor.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Doctor
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        50
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        January 13
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        F
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        5'8" (173 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        58.3 kg (128 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        O+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The Doctor is as serious and clear-minded as can be, and her job is as clear as day. Except she keeps herself busy even when nobody's sick — indeed, it seems she's diligent enough to have studied and researched more in medicine than the average physician would. After all, the crew is extremely understaffed. That's right, The Doctor is our pediatrician, cardiologist, geneticist, surgeon, and OB-GYN all in one.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Economist-->
+        <div id="The Economist" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Economist.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Economist
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        49
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        February 18
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        M
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        6'2" (188 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        80.4 kg (177 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        A-
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>To monitor the allocation of resources amongst all members of humanity in the most efficient manner possible.</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The A-2020's society no longer has a concept of private property or money. Everyone has to share resources to survive, and that is exactly what The Economist is in charge of: The proper recycling and allocation of these very scarce resources, be it food, water, medicine... even trash. (Fun fact: All the water on The A-2020 is just filtered pee!)</p>
+                        <p>But a man with such an important job has zero tolerance for... well, what lowly pleibeians would call "bullshit", and what he would call, "inefficiency".</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Engineer-->
+        <div id="The Engineer" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Engineer.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Engineer
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        17
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        July 21
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        M
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        5'2" (157 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        50.7 kg (112 lbs) (UNDERWEIGHT)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        B+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The Engineer is one of the, if not hands down the, busiest crew members aboard The A-2020. If not tethered outside making repairs or doing a maintenance check of the ship's systems, the crew expects him to be shut inside the tech room solving a differential equation or formulating a way to measure special relativity.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Journalist-->
+        <div id="The Journalist" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Journalist.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Journalist
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        20
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        October 03
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        M
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        5'5" (165 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        62.2 kg (137 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        A-
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>In a spaceship where everyone is busy, they also need to stay on the same page as one another. But there's only so much time and only so much energy. This is The Journalist's line of work: To update the crew on everyone else's work. Befitting his name, he also keeps a small journal with him wherever he goes in an effort to document The A-2020's history.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Musician-->
+        <div id="The Musician" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Musician.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Musician
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        17
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        April 12
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        F
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        4'11" (154 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        43.1 kg (95 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        B+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The crew keeps itself busy most of the time, and eventually, they'll need rest. The Musician strums melodies on her guitar every so often to raise everyone's spirits; even as she passes the halls, she puts on a cheery smile.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Pilot-->
+        <div id="The Pilot" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Pilot.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Pilot
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        30
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        December 21
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        M
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        5'6" (168 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        57.4 kg (126 lbs)(UNDERWEIGHT)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        O-
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The crew can't do without The Pilot. All day long, he stays watch in the cockpit for obstacles to steer clear from or, more importantly, a safe planet to land on. He only ever gets up from his chair to eat or sleep.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Professor-->
+        <div id="The Professor" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Professor.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Professor
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        45
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        October 15
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        F
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        5'4" (163 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        53.7 kg (118 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        AB+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The Professor is a fun and eccentric individual, and the younglings aboard the A-2020 seem naturally drawn towards her. While she specializes in maths and sciences, she also gives her all to teach them to read, write, and speak even as they grow into adulthood; she's even gone ever-tangentially into Earth history.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!--Crewmate data - Soldier-->
+        <div id="The Soldier" class="tabcontent">
+            <table class="table">
+                <tr>
+                    <td colspan="2" class="header">
+                        <h1>???, ???</h1>
+                    </td>
+                    <td rowspan="9" class="imagebox">
+                        <img src="The Soldier.png" width="375px" height="375px">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor" style="width:20%">
+                        ALIASES:
+                    </td>
+                    <td class="data" style="width:40%">
+                        The Soldier
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        AGE:
+                    </td>
+                    <td class="data">
+                        40
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DATE OF BIRTH:
+                    </td>
+                    <td class="data">
+                        June 28
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        PLACE OF ORIGIN:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        SEX:
+                    </td>
+                    <td class="data">
+                        M
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        HEIGHT:
+                    </td>
+                    <td class="data">
+                        6'0" (183 cm)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        WEIGHT:
+                    </td>
+                    <td class="data">
+                        74.8kg (165 lbs)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        BLOOD TYPE:
+                    </td>
+                    <td class="data">
+                        O-
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        MEDICAL CONDITIONS:
+                    </td>
+                    <td class="data">
+                        ???
+                    </td>
+                    <td class="statusA">
+                        <i>Status: Alive</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="descriptor">
+                        DUTY:
+                    </td>
+                    <td colspan="2" class="data">
+                        <i>???</i>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="descriptionHead">
+                        <b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="description">
+                        <p>The Soldier is the peacekeeper onboard. But he doesn't act so gruff and tough; he's a very nice and thoughtful guy.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById("defaultOpen").click();
+
+            // Sidebar functions
+            function openSideBar() {
+                document.getElementById("sidemenu").style.width = "300px";
+                document.getElementById("main").style.marginLeft = "0px";
+            }
+            function closeSideBar() {
+                document.getElementById("sidemenu").style.width = "5px";
+                document.getElementById("main").style.marginLeft= "0px";
+            }
+
+            function openProfile(event, crewmateName){
+                var i, tabcontent, tablinks;
+
+                // Hides all elements with "tabcontent"
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Gets elements with "tablinks" and removes the "active" tag
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", " ");
+                }
+
+                // Shows the current tab and sets it to "active"
+                document.getElementById(crewmateName).style.display = "block";
+                event.currentTarget.className += " active";
+            }
+        </script>
+
+        <li></li>
+    </body>
+</html>
+
+

@@ -1,0 +1,152 @@
+<html>
+    <head>
+        <title>
+            Mayday: A Voyage Through Space
+        </title>
+        <style>
+            .sidebar {
+                height: 100%;
+                width: 305px;
+                position: fixed;
+                z-index: 1;
+                top: 50px;
+                left: -295px;
+                background-color: #000;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 50px;
+                border-top: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                border-radius: 0 10px 10px 0;
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .sidebar a {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+                display: block;
+                padding: 10px;
+                text-align: right;
+            }
+            .sidebar a:link {
+                text-decoration: none;
+            }
+            .sidebar a:visited {
+                color: #0ff;
+                text-decoration: none;
+            }
+            .sidebar:hover {
+                left: 0px;
+            }
+            .sidebar .sidebuttons {
+                border-top: 1px solid #0ff;
+                border-bottom: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                outline: #000 solid 5px;
+                width: 250px;
+            }
+            .mainpage {
+                font-family: 'Courier New', Courier, monospace;
+                color: #0ff;
+                text-align: center;
+                border-bottom: 2px solid #0ff;
+            }
+            .title {
+                font-size: 48px;
+            }
+            .homebody {
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 18px;
+                padding-top: 100px;
+            }
+            .homebody a:link {
+                color: #0ff;
+            }
+            .homebody a:visited {
+                color: #0ff;
+            }
+            .transmission {
+                color: #0ff;
+                font-style: italic;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            .message {
+                color: #fff;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+            #rules {
+                color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 24px;
+                text-align: center;
+            }
+            .ruleslist {
+                color: #fff;
+                font-family: 'Courier New', Courier, monospace;
+                padding-left: 250px;
+                padding-right: 250px;
+            }
+        </style>
+    </head>
+    <body style="background-color: #000">
+        <!--The sidebar-->
+        <div class="sidebar" id="sidemenu">
+            <div id="sideicons">
+                <h1 style="text-align: center">Menu</h1>
+                <a href="MD-HOME.html" class="sidebuttons">Home</a>
+                <br>
+                <a href="MD-CHAPTERLIST.html" class="sidebuttons">Chapters</a>
+                <br>
+                <a href="MD-BLOG.html" class="sidebuttons">Blog / Updates</a>
+                <br>
+                <a href="MD-CHARPROF.html" class="sidebuttons">Crewmate Database</a>
+                <br>
+                <a href="MD-CREDITS.html" class="sidebuttons">Credits</a>
+            </div>
+        </div>
+        
+        <!--The title & main body-->
+        <div class="mainpage" id="main">
+            <br><br><br><br><br><br>
+            <h1 class="title">
+                Mayday Mayday Mayday
+                <br>
+                Mayday Mayday Mayday
+                <br>
+                Mayday Mayday Mayday
+                <br>
+                Mayday Mayday Mayday
+            </h1>
+            <br>
+            <p><i>Earth is no more. We have killed it.</i></p>
+            <br>
+        </div>
+        
+        <!--Webpage body-->
+        <div class="homebody">
+            <p class="transmission">TRANSMISSION_ID: #A-2020-E-145128-01-05-23-0009AB4C</p>
+            <p class="message">Greetings, end user.</p>
+            <p class="message">The last 12 humans have managed to live in mutual prosperity aboard the ARK-2020 (often abbreviated to 'The A-2020' or just 'The 2020'), an interstellar voyager en route to the nearest habitable exoplanet. Unfortunately it appears that a build-up of unresolved disputes and inner turmoil is once more beginning to take a toll on the crew. I predict this will lead to a series of conflicts and infighting.</p>
+            <p class="message">You shall now witness the very last of human history unfold before you.</p>
+            <br>
+            <p class="transmission"><i>TRANSMISSION_ID: #A-2020-E-145128-01-05-23-000A370D</i></p>
+            <p class="message">The story of Mayday is pre-written and set in stone. However, every historical event has many sides, and humans are very complex, nuanced, and even paradoxical beings. Thus this story is best told and read through many perspectives.</p>
+            <p class="message">Unfortunately, minor damages to the system prevent me from uploading several documents at a time. It appears I am limited to sending you only one document every week. It is unfortunate, but it is the only way. As a compromise, I am willing to let <b>you all</b> collectively vote for a crew member whose perspective you wish to view every week.</p>
+            <br>
+            <p id="rules"><b><i>RULES:</i></b></p>
+            <ol type="1" class="ruleslist">
+                <li>Every chapter, save for the first, follows one of the 12 crew members on board the A-2020. The next chapter's point character is dictated by majority vote through the <a href="MD-POLL.html">Polls</a> page (there is no other method.)</li>
+                <li>After winning, a crew member is ineligible to win in the next round of voting. This means no crew member can win twice in a row.</li>
+                <li>If a crew member is asleep, unconscious, or deceased by the time the next chapter starts, they are ineligible to win.</li>
+                <li>Ineligible crew members won't always immediately be removed as a poll option.</li>
+                <li>If two or more crew members tie for the vote, one will be chosen at random.</li>
+                <li>Poll statistics will only be revealed once The A-2020 has reached its destination.</li>
+            </ol>
+            <p class="message">I trust that you will all be nice to each other when making a decision on who to vote for, no matter who or where you are and where you choose to communicate. Not everyone may be satisfied with the winning vote, and that's okay.</p>
+        </div>
+        <script src="sidebar.js"></script>
+    </body>
+</html>

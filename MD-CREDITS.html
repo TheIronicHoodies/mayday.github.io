@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>Mayday: Credits & Contacts</title>
+        <style>
+            * {
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .sidebar {
+                height: 100%;
+                width: 305px;
+                position: fixed;
+                z-index: 1;
+                top: 50px;
+                left: -295px;
+                background-color: #000;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 50px;
+                border-top: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                border-radius: 0 10px 10px 0;
+                color: #0ff;
+            }
+            .sidebar a {
+                color: #0ff;
+                font-size: 24px;
+                display: block;
+                padding: 10px;
+                text-align: right;
+            }
+            .sidebar a:link {
+                text-decoration: none;
+            }
+            .sidebar:hover {
+                left: 0px;
+            }
+            .sidebar .sidebuttons {
+                border-top: 1px solid #0ff;
+                border-bottom: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                outline: #000 solid 5px;
+                width: 250px;
+            }
+            .titlebox {
+                color: #0ff;
+                font-size: 24px !important;
+                text-align: center;
+                border-bottom: 2px solid #0ff;
+            }
+            .header {
+                color: #0ff;
+                font-size: 30px;
+                padding-left: 100px;
+                padding-right: 100px;
+                padding-top: 50px;
+            }
+            p {
+                color: #fff;
+                padding-left: 150px;
+                padding-right: 150px;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body style="background-color: #000">
+        <!--The sidebar-->
+        <div class="sidebar" id="sidemenu">
+            <div id="sideicons">
+                <h1 style="text-align: center">Menu</h1>
+                <a href="MD-HOME.html" class="sidebuttons">Home</a>
+                <br>
+                <a href="MD-CHAPTERLIST.html" class="sidebuttons">Chapters</a>
+                <br>
+                <a href="MD-BLOG.html" class="sidebuttons">Blog / Updates</a>
+                <br>
+                <a href="MD-CHARPROF.html" class="sidebuttons">Crewmate Database</a>
+                <br>
+                <a href="MD-CREDITS.html" class="sidebuttons">Credits</a>
+            </div>
+        </div>
+
+        <!--The title/header.-->
+        <div class="titlebox">
+            <br><br><br><br>
+            <h1>Credits & Contacts</h1>
+        </div>
+
+        <div>
+            <h1 class="header">About Me</h1>
+            <p>Hi! I'm Levi Ann Lawson. I'm a tech nerd by day, and a writer with too many stories in their head by night. I'm a cool and chill guy... I think.</p>
+        </div>
+
+        <script src="sidebar.js"></script>
+    </body>
+</html>
