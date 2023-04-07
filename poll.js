@@ -1,3 +1,5 @@
+let selection = document.getElementById('crewmates');
+
 // This function is called upon changing the selection
 const onChange = () => {
     //
@@ -8,7 +10,7 @@ const submitVote = () => {
     form.addEventListener('submit', () => {
         e.preventDefault(); // Prevents the browser from refreshing;
 
-        let vote = document.getElementById('crewmates').value; // The dropdown menu's 'value'; what is currently selected
+        let vote = selection.value; // The dropdown menu's 'value'; what is currently selected
         json = JSON.stringify(vote);
     })
 }
@@ -27,3 +29,5 @@ const saveVote = () => {
         }
     })
 }
+
+document.getElementById("success").innerHTML = String(selection);
