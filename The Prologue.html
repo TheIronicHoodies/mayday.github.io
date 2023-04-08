@@ -104,6 +104,9 @@
                 width: 300px;
                 margin-bottom: 500px;
             }
+            #returnMessage {
+                visibility: hidden;
+            }
         </style>
     </head>
     <body style="background-color: #000">
@@ -203,7 +206,7 @@
                     <p>You have reached the end of the chapter. Please select one option from the dropdown menu below.</p>
                     <p>Please note that you cannot change your vote after pressing SUBMIT, and that only ONE vote is allowed per IP address.</p>
                 </label>
-                <select name="crewmate" id="crewmates" onchange="onChange()">
+                <select name="crewmate" id="crewmates">
                     <option value="Athlete" selected>The Athlete</option>
                     <option value="Captain">The Captain</option>
                     <option value="Chef">The Chef</option>
@@ -222,7 +225,7 @@
             </form>
         </div>
 
-        <div>
+        <div id="returnMessage">
             <span id="success"></span>
         </div>
 
