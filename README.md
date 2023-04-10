@@ -1,1 +1,0 @@
-# mayday.github.io
