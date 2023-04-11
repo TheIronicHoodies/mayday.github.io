@@ -1,8 +1,14 @@
-let selection = document.getElementById('crewmates');
+const form = document.querySelector('form'); // Selects the form.
+let selection = document.getElementById('crewmates'); // Grabs the selected option.
 
+var i, option;
+
+const onChange = () => {
+    // 
+}
 // This function is called upon pressing submit
 const submitVote = () => {
-    form.addEventListener('submit', () => {
+    form.addEventListener('submit', (e) => {
         e.preventDefault(); // Prevents the browser from refreshing;
         saveVote();
         document.getElementById("returnMessage").style.visibility = "visible";
