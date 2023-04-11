@@ -33,4 +33,4 @@ const saveVote = () => {
     })
 }
 
-document.getElementById("success").innerHTML = "Your vote for the " + selection + " has pushed through successfully."
+document.getElementById("returnMessage").innerHTML = "Your vote for the " + selection + " has pushed through successfully."
