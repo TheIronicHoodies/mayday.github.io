@@ -11,7 +11,7 @@ const submitVote = () => {
     form.addEventListener('submit', (e) => {
         e.preventDefault(); // Prevents the browser from refreshing;
         saveVote();
-        document.getElementById("returnMessage").style.visibility = "visible";
+        document.getElementById("returnMessage").style.display = "block";
 
         let vote = selection.value; // The dropdown menu's 'value'; what is currently selected
         json = JSON.stringify(vote);
