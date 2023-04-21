@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
     <head>
         <title>
@@ -67,12 +68,6 @@
             .homebody a:visited {
                 color: #0ff;
             }
-            .transmission {
-                color: #0ff;
-                font-style: italic;
-                padding-left: 100px;
-                padding-right: 100px;
-            }
             .message {
                 color: #fff;
                 padding-left: 150px;
@@ -84,11 +79,18 @@
                 font-size: 24px;
                 text-align: center;
             }
-            .ruleslist {
+            table {
+                width: 75%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            th, td {
+                border: 1px solid #0ff;
+                border-collapse: collapse;
                 color: #fff;
+                font-size: 18px;
                 font-family: 'Courier New', Courier, monospace;
-                padding-left: 250px;
-                padding-right: 250px;
+                padding: 25px;
             }
         </style>
     </head>
@@ -128,16 +130,20 @@
         
         <!--Webpage body-->
         <div class="homebody">
-            <p id="metamsg">As the last humans in existence, your job is to survive, to thrive, to create, and to procreate.</p>
-            <p class="transmission">TRANSMISSION_ID: #A-2020-E-145128-01-05-23-0009AB4C</p>
-            <p class="message">Greetings, end user.</p>
-            <p class="message">The last 12 humans have managed to live in mutual prosperity aboard the ARK-2020 (often abbreviated to 'The A-2020' or just 'The 2020'), an interstellar voyager en route to the nearest habitable exoplanet. Unfortunately it appears that a build-up of unresolved disputes and inner turmoil is once more beginning to take a toll on the crew. I predict this will lead to a series of conflicts and infighting.</p>
-            <p class="message">You shall now witness the very last of human history unfold before you.</p>
+            <p class="message">Greetings, end users.</p>
+            <p class="message">The last 12 humans have managed to live in mutual prosperity aboard the ARK-2020 (often abbreviated to 'The A-2020' or just 'The 2020'), an interstellar voyager en route to the nearest habitable exoplanet. Sadly, 22 years ago, it crashed.</p>
+            <p class="message">While several recording devices were present onboard, I am unable to analyze and understand all of the data by myself. My goal is to understand humans. I suspect that the cause of their ultimate demise was the build-up of unresolved conflicts and inner turmoil.</p>
+            <p class="message">Unfortunately, this system can only handle so much. It appears I am limited to sending you only one document every week. It is unfortunate, but it is the only way. As a compromise, I am willing to let <b>you all</b> collectively vote for a crew member whose perspective you wish to view every week.</p>
+
             <br>
-            <p class="transmission"><i>TRANSMISSION_ID: #A-2020-E-145128-01-05-23-000A370D</i></p>
-            <p class="message">The story of Mayday is pre-written and set in stone. However, every historical event has many sides, and humans are very complex, nuanced, and even paradoxical beings. Thus this story is best told and read through many perspectives.</p>
-            <p class="message">Unfortunately, minor damages to the system prevent me from uploading several documents at a time. It appears I am limited to sending you only one document every week. It is unfortunate, but it is the only way. As a compromise, I am willing to let <b>you all</b> collectively vote for a crew member whose perspective you wish to view every week.</p>
-            <br>
+
+            <table>
+                <th id="rules"><b>RULES:</b></th>
+                <tr>
+                    <td><b>1.</b> Every chapter after the prologue follows one of the A-2020's 12 crew personnel. The next chapter's point character is dictated by majority vote through the poll found in the latest chapter.</td>
+                </tr>
+            </table>
+
             <p id="rules"><b><i>RULES:</i></b></p>
             <ol type="1" class="ruleslist">
                 <li>Every chapter, save for the prologue, follows one of the 12 crew members on board the A-2020. The next chapter's point character is dictated by majority vote through the poll at the end of each chapter (there is no other method.)</li>
