@@ -15,11 +15,12 @@ const submitVote = () => {
     const handleForm = (e) => {
 
         e.preventDefault(); // Prevents the browser from refreshing;
-        e.stopImmediatePropagation();
+        e.stopPropagation();
+        debugger;
 
         saveVote(); // Saves the selected option as a JSON string
 
-        // Success message & pseudo console log
+        // Success message
         document.getElementById("returnMessage").innerHTML = "Your vote for the " + selection.vote + " has pushed through successfully."
         document.getElementById("returnMessage").style.display = "block";
     }
@@ -35,4 +36,3 @@ const submitVote = () => {
         })
     }
 }
-
