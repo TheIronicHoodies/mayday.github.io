@@ -36,4 +36,6 @@ CHAPTER LIST is a navigation page for all published chapters. They may be sorted
 
 The header contains a countdown to the next chapter. The site does not automatically update upon reaching zero, and chapters may not release as soon as the countdown reaches 0:00:00:00. However, it does prevent further, 'late' votes from entering the system.
 
+D. BLOG / UPDATE
+
 INCOMPLETE; TO BE UPDATED
