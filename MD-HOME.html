@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html>
+
     <head>
         <title>
             Mayday: A Voyage Through Space
         </title>
-        <meta name="description" content="As the last humans in existence, your job is to survive, to thrive, to create, and to procreate.">
+        <meta name="description"
+            content="As the last humans in existence, your job is to survive, to thrive, to create, and to procreate.">
         <style>
+            * {
+                line-height: 1.5;
+            }
+
             .sidebar {
                 height: 100%;
                 width: 305px;
@@ -23,6 +29,7 @@
                 color: #0ff;
                 font-family: 'Courier New', Courier, monospace;
             }
+
             .sidebar a {
                 color: #0ff;
                 font-family: 'Courier New', Courier, monospace;
@@ -31,16 +38,20 @@
                 padding: 10px;
                 text-align: right;
             }
+
             .sidebar a:link {
                 text-decoration: none;
             }
+
             .sidebar a:visited {
                 color: #0ff;
                 text-decoration: none;
             }
+
             .sidebar:hover {
                 left: 0px;
             }
+
             .sidebar .sidebuttons {
                 border-top: 1px solid #0ff;
                 border-bottom: 1px solid #0ff;
@@ -48,52 +59,86 @@
                 outline: #000 solid 5px;
                 width: 250px;
             }
+
             .mainpage {
                 font-family: 'Courier New', Courier, monospace;
                 color: #0ff;
                 text-align: center;
                 border-bottom: 2px solid #0ff;
             }
+
             .title {
                 font-size: 48px;
             }
+
             .homebody {
                 font-family: 'Courier New', Courier, monospace;
                 font-size: 18px;
                 padding-top: 100px;
             }
+
             .homebody a:link {
                 color: #0ff;
             }
+
             .homebody a:visited {
                 color: #0ff;
             }
-            .message {
-                color: #fff;
-                padding-left: 150px;
-                padding-right: 150px;
+
+            .arrows {
+                border: none;
+                background-color: #000;
+                color: #0ff;
+                font-size: 48px;
+                font-weight: 800;
+                cursor: pointer;
             }
+
             #rules {
                 color: #0ff;
                 font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
                 text-align: center;
             }
+
+            #tagline {
+                padding: 0 !important;
+                font-style: italic;
+            }
+
             table {
-                width: 75%;
+                border-collapse: collapse;
+                width: 750px;
+                display: block;
                 margin-left: auto;
                 margin-right: auto;
             }
-            th, td {
-                border: 1px solid #0ff;
-                border-collapse: collapse;
+
+            th,
+            td {
                 color: #fff;
                 font-size: 18px;
                 font-family: 'Courier New', Courier, monospace;
                 padding: 25px;
             }
+
+            tr {
+                border: 1px solid #0ff;
+            }
+
+            td {
+                height: 100px;
+            }
+
+            p {
+                color: #fff;
+                padding-left: 150px;
+                padding-right: 150px;
+            }
+            
         </style>
     </head>
+
     <body style="background-color: #000">
         <!--The sidebar-->
         <div class="sidebar" id="sidemenu">
@@ -110,7 +155,7 @@
                 <a href="MD-CREDITS.html" class="sidebuttons">Credits</a>
             </div>
         </div>
-        
+
         <!--The title & main body-->
         <div class="mainpage" id="main">
             <br><br><br><br><br><br>
@@ -124,36 +169,127 @@
                 Mayday Mayday Mayday
             </h1>
             <br>
-            <p><i>Earth is no more. We have killed it.</i></p>
+            <p id="tagline">Earth is no more. We have killed it.</p>
             <br>
         </div>
-        
+
         <!--Webpage body-->
         <div class="homebody">
-            <p class="message">Greetings, end users.</p>
-            <p class="message">The last 12 humans have managed to live in mutual prosperity aboard the ARK-2020 (often abbreviated to 'The A-2020' or just 'The 2020'), an interstellar voyager en route to the nearest habitable exoplanet. Sadly, 22 years ago, it crashed.</p>
-            <p class="message">While several recording devices were present onboard, I am unable to analyze and understand all of the data by myself. My goal is to understand humans. I suspect that the cause of their ultimate demise was the build-up of unresolved conflicts and inner turmoil.</p>
-            <p class="message">Unfortunately, this system can only handle so much. It appears I am limited to sending you only one document every week. It is unfortunate, but it is the only way. As a compromise, I am willing to let <b>you all</b> collectively vote for a crew member whose perspective you wish to view every week.</p>
+            <p>Greetings, end users.</p>
+            <p>The last 12 humans have managed to live in mutual prosperity aboard the ARK-2020 (often abbreviated to 'The
+                A-2020' or just 'The 2020'), an interstellar voyager en route to the nearest habitable exoplanet. Sadly, 22
+                years ago, it crashed.</p>
+            <p>While several recording devices were present onboard, I am unable to analyze and understand all of the data
+                by myself. My goal is to understand humans. I suspect that the cause of their ultimate demise was the
+                build-up of unresolved conflicts and inner turmoil.</p>
+            <p>Unfortunately, this system can only handle so much. It appears I am limited to sending you only one document
+                every week. It is unfortunate, but it is the only way. As a compromise, I am willing to let <b>you all</b>
+                collectively vote for a crew member whose perspective you wish to view every week.</p>
 
             <br>
 
-            <table>
-                <th id="rules"><b>RULES:</b></th>
+            <!--Rule 1-->
+            <table id="rule1" class="ruletext">
+                <th id="rules" colspan="3"><b>-——&lt;&lt;-RULES-&gt;&gt;——-</b></th>
                 <tr>
-                    <td><b>1.</b> Every chapter after the prologue follows one of the A-2020's 12 crew personnel. The next chapter's point character is dictated by majority vote through the poll found in the latest chapter.</td>
+                    <td><button class="arrows" onclick="openRule(event, 'rule0')">&lt;</button></td>
+                    <td>
+                        <b>1.</b> Every chapter after the prologue follows one of the A-2020's 12 crew personnel. The next
+                        chapter's point character is dictated by majority vote through the poll found in the latest chapter.
+                    </td>
+                    <td><button class="arrows" onclick="openRule(event, 'rule2')">&gt;</button></td>
                 </tr>
             </table>
 
-            <p id="rules"><b><i>RULES:</i></b></p>
-            <ol type="1" class="ruleslist">
-                <li>Every chapter, save for the prologue, follows one of the 12 crew members on board the A-2020. The next chapter's point character is dictated by majority vote through the poll at the end of each chapter (there is no other method.)</li>
-                <li>After winning, a crew member cannot be voted for in the next round. This means no crew member can win twice in a row.</li>
-                <li>If a crew member is asleep, unconscious, or deceased by the time the next chapter starts, they are ineligible to win.</li>
-                <li>If two or more crew members tie for the vote, one will be chosen at random.</li>
-                <li>Poll statistics will only be revealed once The A-2020 has reached its destination.</li>
-            </ol>
-            <p class="message">I trust that you will all be nice to each other when making a decision on who to vote for, no matter who or where you are and where you choose to communicate. Not everyone may be satisfied with the winning vote, and that's okay. I don't believe that truths are meant to be buried, but they may </p>
+            <table id="rule2" class="ruletext">
+                <th id="rules" colspan="3"><b>-——&lt;&lt;-RULES-&gt;&gt;——-</b></th>
+                <tr>
+                    <td><button class="arrows" onclick="openRule(event, 'rule1')">&lt;</button></td>
+                    <td>
+                        <b>2.</b> After winning, a crew member cannot be voted for in the next round. This means no crew
+                        member can win twice in a row.
+                    </td>
+                    <td><button class="arrows" onclick="openRule(event, 'rule3')">&gt;</button></td>
+                </tr>
+            </table>
+
+            <table id="rule3" class="ruletext">
+                <th id="rules" colspan="3"><b>-——&lt;&lt;-RULES-&gt;&gt;——-</b></th>
+                <tr>
+                    <td><button class="arrows" onclick="openRule(event, 'rule2')">&lt;</button></td>
+                    <td>
+                        <b>3.</b> If a crew member is asleep, unconscious, or deceased by the time the next chapter starts,
+                        they are ineligible to win.
+                    </td>
+                    <td><button class="arrows" onclick="openRule(event, 'rule4')">&gt;</button></td>
+                </tr>
+            </table>
+
+            <table id="rule4" class="ruletext">
+                <th id="rules" colspan="3"><b>-——&lt;&lt;-RULES-&gt;&gt;——-</b></th>
+                <tr>
+                    <td><button class="arrows" onclick="openRule(event, 'rule3')">&lt;</button></td>
+                    <td>
+                        <b>4.</b> If two or more crew members are tied, one will be chosen at random.
+                    </td>
+                    <td><button class="arrows" onclick="openRule(event, 'rule5')">&gt;</button></td>
+                </tr>
+            </table>
+
+            <table id="rule5" class="ruletext">
+                <th id="rules" colspan="3"><b>-——&lt;&lt;-RULES-&gt;&gt;——-</b></th>
+                <tr>
+                    <td><button class="arrows" onclick="openRule(event, 'rule4')">&lt;</button></td>
+                    <td>
+                        <b>5.</b> Poll statistics will only be revealed once the human race has become extinct.
+                    </td>
+                    <td><button class="arrows" onclick="openRule(event, 'rule0')">&gt;</button></td>
+                </tr>
+            </table>
+
+            <table id="rule0" class="ruletext">
+                <th id="rules" colspan="3"><b>-——&lt;&lt;-RULES-&gt;&gt;——-</b></th>
+                <tr>
+                    <td><button class="arrows" onclick="openRule(event, 'rule5')">&lt;</button></td>
+                    <td>
+                        <b>6.</b> Additional rules may be implemented when deemed necessary.
+                    </td>
+                    <td><button class="arrows" id="defaultOpen" onclick="openRule(event, 'rule1')">&gt;</button></td>
+                </tr>
+            </table>
+
+            <p>
+                I trust that you will all be nice to each other when making a decision on who to vote for, no matter who or
+                where you are and where you choose to communicate. Not everyone may be satisfied with the winning vote, and
+                that's okay.
+            </p>
         </div>
+
         <script src="sidebar.js"></script>
+
+        <script>
+            document.getElementById("defaultOpen").click();
+
+            function openRule(event, ruleNo) {
+                var i, ruletext, arrows;
+
+                // Hides all elements with "ruletext"
+                ruletext = document.getElementsByClassName("ruletext");
+                for (i = 0; i < ruletext.length; i++) {
+                    ruletext[i].style.display = "none";
+                }
+
+                // Gets elements with "arrows" and removes the "active" tag
+                arrows = document.getElementsByClassName("arrows");
+                for (i = 0; i < arrows.length; i++) {
+                    arrows[i].className = arrows[i].className.replace(" active", " ");
+                }
+
+                // Shows the current tab and sets it to "active"
+                document.getElementById(ruleNo).style.display = "block";
+                event.currentTarget.className += " active";
+            }
+        </script>
     </body>
+
 </html>
