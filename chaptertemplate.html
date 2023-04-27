@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mayday: The Prologue</title>
+        <style>
+            * {
+                font-family: 'Courier New', Courier, monospace;
+            }
+            .sidebar {
+                height: 100%;
+                width: 305px;
+                position: fixed;
+                z-index: 1;
+                top: 50px;
+                left: -295px;
+                background-color: #000;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 50px;
+                border-top: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                border-radius: 0 10px 10px 0;
+                color: #0ff;
+            }
+            .sidebar a {
+                color: #0ff;
+                font-size: 24px;
+                display: block;
+                padding: 10px;
+                text-align: right;
+            }
+            .sidebar a:link {
+                text-decoration: none;
+            }
+            .sidebar:hover {
+                left: 0px;
+            }
+            .sidebar .sidebuttons {
+                border-top: 1px solid #0ff;
+                border-bottom: 1px solid #0ff;
+                border-right: 1px solid #0ff;
+                outline: #000 solid 5px;
+                width: 250px;
+            }
+            .titlebox {
+                color: #0ff;
+                font-size: 24px;
+                text-align: center;
+                border-bottom: 2px solid #0ff;
+            }
+            .pagecontent {
+                color: #fff;
+                font-size: 18px;
+                padding: 50px 100px 50px 150px;
+                display: flex;
+                border-bottom: 2px solid #0ff;
+            }
+            .scenebreak {
+                color: #0ff;
+                font-size: 20px;
+                text-align: center;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+            .chaptertext {
+                width: 80%;
+                line-height: 1.25;
+            }
+            .chaptertext p {
+                text-indent: 50px;
+            }
+            .start {
+                text-indent: 0px !important;
+            }
+            .ribbon {
+                margin-top: 25px;
+                margin-left: 25px;
+            }
+            .next {
+                color: #0ff;
+                text-decoration: none;
+            }
+            .end {
+                font-size: 18px;
+                color: #0ff;
+                cursor: pointer;
+            }
+            .end a {
+                color: #0ff !important;
+            }
+            .end a:hover {
+                color: #fff;
+            }
+            .end a:after {
+                color: #0ff;
+            }
+            .poll {
+                margin-top: 50px;
+                padding: 50px 150px 50px 150px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body style="background-color: #000">
+        <!--The sidebar-->
+        <div class="sidebar" id="sidemenu">
+            <div id="sideicons">
+                <h1 style="text-align: center">Menu</h1>
+                <a href="MD-HOME.html" class="sidebuttons">Home</a>
+                <br>
+                <a href="MD-CHAPTERLIST.html" class="sidebuttons">Chapters</a>
+                <br>
+                <a href="MD-BLOG.html" class="sidebuttons">Blog / Updates</a>
+                <br>
+                <a href="MD-CHARPROF.html" class="sidebuttons">Crewmate Database</a>
+                <br>
+                <a href="MD-CREDITS.html" class="sidebuttons">Credits</a>
+            </div>
+        </div>
+
+        <!--The title/header.-->
+        <div class="titlebox">
+            <br><br><br><br>
+            <h1>The Title X</h1>
+        </div>
+
+        <!--The chapter body-->
+        <div class="pagecontent">
+            <div class="chaptertext">
+                <p class="start">Earth was no more.</p>
+                <p></p>
+                <div class="scenebreak">|||│▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│|||</div>
+                <p class="start">"LINE IN ORDER, EVERYONE!" commanded The Captain, a serious man with a rigid, stern face and a squared-off beard. With a wave of his hand, eight people lined into two rows in the hall and faced him. "As the last survivors of the species Homo Sapiens, what is your duty?"</p>
+                <p></p>
+            </div>
+
+            <div class="ribbon">
+                <a href="MD-CHAPTERLIST.html" class="next">&gt; Return to Chapter List</a>
+                <br><br>
+                <a href="javascript:void(0)" class="next">&gt; Previous Chapter</a>
+                <br><br>
+                <a href="404.html" class="next">&gt; Next Chapter</a>
+            </div>
+        </div>
+
+        <div class="poll">
+            <span class="end">Congrats! You've reached the end of the chapter. Click <a href='https://strawpoll.com/polls/YVyPmO6YAnN' target='_blank'>here</a> to vote for the next chapter's point character.</span>
+        </div>
+
+        <script type="module" src="sidebar.js"></script>
+    </body>
+</html>

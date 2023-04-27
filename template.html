@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Error 404</title>
+        <title></title>
         <style>
+            * {
+                font-family: 'Courier New', Courier, monospace;
+            }
+
             .sidebar {
                 height: 100%;
                 width: 305px;
@@ -18,22 +22,29 @@
                 border-right: 1px solid #0ff;
                 border-radius: 0 10px 10px 0;
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
             }
+
             .sidebar a {
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
                 display: block;
                 padding: 10px;
                 text-align: right;
             }
+
             .sidebar a:link {
                 text-decoration: none;
             }
+
+            .sidebar a:visited {
+                color: #0ff;
+                text-decoration: none;
+            }
+
             .sidebar:hover {
                 left: 0px;
             }
+
             .sidebar .sidebuttons {
                 border-top: 1px solid #0ff;
                 border-bottom: 1px solid #0ff;
@@ -41,25 +52,17 @@
                 outline: #000 solid 5px;
                 width: 250px;
             }
-            #error {
-                color: #ff0;
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 96px;
-                padding-top: 125px;
-                padding-left: 125px;
-            }
-            #errorMessage {
-                color: #ff0;
-                font-family: 'Courier New', Courier, monospace;
-                font-size: 24px;
-                padding-left: 125px;
-                width: 50%;
+            .titlebox {
+                color: #0ff;
+                font-size: 24px !important;
+                text-align: center;
+                border-bottom: 2px solid #0ff;
             }
         </style>
     </head>
     <body style="background-color: #000">
-        <!--The sidebar-->
-        <div class="sidebar" id="sidemenu">
+         <!--The sidebar-->
+         <div class="sidebar" id="sidemenu">
             <div id="sideicons">
                 <h1 style="text-align: center">Menu</h1>
                 <a href="MD-HOME.html" class="sidebuttons">Home</a>
@@ -74,25 +77,12 @@
             </div>
         </div>
 
-        <div id="error">
-            Error 404
+        <!--The title/header.-->
+        <div class="titlebox">
+            <br><br><br><br>
+            <h1>template</h1>
         </div>
 
-        <div id="errorMessage">
-            <p>It appears that unforeseen circumstances may have damaged The A-2020's communications. That, or you are attempting to navigate to a page that has been deleted or renamed.</p>
-            <p>While repairs are ongoing, we suggest exploring the pages available on the sidebar menu to your left.</p>
-        </div>
-
-        <script>
-            // Sidebar functions
-            function openSideBar() {
-                document.getElementById("sidemenu").style.width = "300px";
-                document.getElementById("main").style.marginLeft = "0px";
-            }
-            function closeSideBar() {
-                document.getElementById("sidemenu").style.width = "5px";
-                document.getElementById("main").style.marginLeft= "0px";
-            }
-        </script>
+        <script src="sidebar.js"></script>
     </body>
 </html>

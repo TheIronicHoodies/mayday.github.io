@@ -1,32 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mayday: Blog and Updates</title>
+        <title>Error 404</title>
         <style>
-            * {
-                font-family: 'Courier New', Courier, monospace;
-            }
-            input {
-                font-size: 18px;
-                color: #0ff;
-                background-color: #000;
-                display: inline;
-                margin-top: 50px;
-                margin-left: 75px;
-                border: 1px solid #0ff;
-                border-radius: 5px;
-                padding: 10px;
-                width: 1000px;
-            }
-            ::placeholder {
-                color: #fff;
-            }
-            li {
-                margin-left: 75px;
-                padding-top: 25px;
-                display: flex;
-                font-size: 18px;
-            }
             .sidebar {
                 height: 100%;
                 width: 305px;
@@ -42,9 +18,11 @@
                 border-right: 1px solid #0ff;
                 border-radius: 0 10px 10px 0;
                 color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
             }
             .sidebar a {
                 color: #0ff;
+                font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
                 display: block;
                 padding: 10px;
@@ -63,21 +41,19 @@
                 outline: #000 solid 5px;
                 width: 250px;
             }
-            .titlebox {
-                color: #0ff;
+            #error {
+                color: #ff0;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 96px;
+                padding-top: 125px;
+                padding-left: 125px;
+            }
+            #errorMessage {
+                color: #ff0;
+                font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
-                text-align: center;
-                border-bottom: 2px solid #0ff;
-            }
-            a:link, a:visited, a:hover {
-                color: #0ff;
-                text-decoration: none;
-            }
-            #body {
-                margin-top: 25px;
-            }
-            .new {
-                color: #ff0 !important;
+                padding-left: 125px;
+                width: 50%;
             }
         </style>
     </head>
@@ -98,22 +74,15 @@
             </div>
         </div>
 
-        <!--The title/header.-->
-        <div class="titlebox">
-            <br><br><br><br>
-            <h1>Blog & Updates</h1>
+        <div id="error">
+            Error 404
         </div>
 
-        <input type="text" id="userInput" onkeyup="sortList()" placeholder="Search for a date / title and click on an entry to browse.">
-
-        <div id="body">
-            <ul id="entries">
-                <li><a href="javascript:void(0)" class="new"><b>[NEW] May 1, 2023:</b> A Bit About Voting</a></li>
-                <li><a href="javascript:void(0)" class="new"><b>[NEW] May 1, 2023:</b> The Beginning</a></li>
-            </ul>
+        <div id="errorMessage">
+            <p>It appears you are trying to navigate to a page that has been renamed, deleted, or does not exist.</p>
+            <p>While The Engineer conducts his repairs, we suggest exploring the pages available on the sidebar menu to your left.</p>
         </div>
 
         <script type="module" src="sidebar.js"></script>
-        <script src="sort.js"></script>
     </body>
 </html>

@@ -5,6 +5,7 @@
         <style>
             body {
                 margin-bottom: 500px;
+                font-family: 'Courier New', Courier, monospace;
             }
             .sidebar {
                 height: 100%;
@@ -21,11 +22,9 @@
                 border-right: 1px solid #0ff;
                 border-radius: 0 10px 10px 0;
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
             }
             .sidebar a {
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
                 display: block;
                 padding: 10px;
@@ -50,7 +49,6 @@
             }
             .titlebox {
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
                 text-align: center;
                 border-bottom: 2px solid #0ff;
@@ -58,20 +56,11 @@
             }
             .countdownTimer {
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
                 font-size: 60px;
                 display: inline;
             }
-            .transmission {
-                color: #0ff;
-                font-style: italic;
-                font-family: 'Courier New', Courier, monospace;
-                padding-left: 100px;
-                padding-right: 100px;
-            }
             .message {
                 color: #fff;
-                font-family: 'Courier New', Courier, monospace;
                 padding-left: 150px;
                 padding-right: 150px;
             }
@@ -80,7 +69,6 @@
                 padding-top: 20px;
                 padding-right: 75px;
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
             }
             .buttonContainer button {
                 border: 1px solid #0ff;
@@ -99,7 +87,6 @@
             }
             .chapters {
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
                 width: 75%;
                 position: absolute;
             }
@@ -167,6 +154,15 @@
             .filename {
                 text-align: center;
             }
+            #latest {
+                margin-left: 150px;
+                margin-top: 50px;
+                font-size: 18px;
+            }
+            #latest a:visited {
+                color: #0ff;
+                font-weight: bold;
+            }
         </style>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -204,14 +200,17 @@
         <br>
 
         <div>
-            <p class="transmission">TRANSMISSION_ID: #A-2020-E-194836-01-05-60-000C4672E</p>
-            <p class="message">Greetings, end user. Here is the repository for uploaded chapters. You may sort them by list or by grid by clicking the buttons on the top right of the panel.</p>
+            <p id="latest"><a href="The Prologue.html">Shortcut to Latest chapter</a></p>
         </div>
 
         <!--Sort by alphabetical list/grid view-->
         <div class="buttonContainer">
             <button class="sortBtn" onclick="openProfile(event,'list')" id="defaultOpen"><i class="fa fa-list"></i></button>
             <button class="sortBtn" onclick="openProfile(event,'grid')"><i class="fa fa-th-large"></i></button>
+        </div>
+
+        <div class="tooltip">
+            <span>Sort as list</span>
         </div>
 
         <br><br><br><br><br>
@@ -411,8 +410,8 @@
             </table>
         </div>
         
-        <script src="sidebar.js"></script>
-
+        <script type="module" src="sidebar.js"></script>
         <script src="countdown.js"></script>
+
     </body>
 </html>

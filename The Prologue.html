@@ -6,12 +6,6 @@
             * {
                 font-family: 'Courier New', Courier, monospace;
             }
-            p {
-                text-indent: 50px;
-            }
-            #start {
-                text-indent: 0px !important;
-            }
             .sidebar {
                 height: 100%;
                 width: 305px;
@@ -27,11 +21,9 @@
                 border-right: 1px solid #0ff;
                 border-radius: 0 10px 10px 0;
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
             }
             .sidebar a {
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
                 display: block;
                 padding: 10px;
@@ -52,62 +44,60 @@
             }
             .titlebox {
                 color: #0ff;
-                font-family: 'Courier New', Courier, monospace;
                 font-size: 24px;
                 text-align: center;
                 border-bottom: 2px solid #0ff;
             }
             .pagecontent {
                 color: #fff;
-                font-family: 'Courier New', Courier, monospace;
                 font-size: 18px;
-                padding: 50px;
-                margin-left: 100px;
-                margin-right: 50px;
-                border-bottom: 2px solid #fff;
+                padding: 50px 100px 50px 150px;
+                display: flex;
+                border-bottom: 1px solid #0ff;
             }
-            label p {
+            .scenebreak {
                 color: #0ff;
-                font-size: 18px;
+                font-size: 20px;
                 text-align: center;
+                margin-top: 25px;
+                margin-bottom: 25px;
+            }
+            .chaptertext {
+                width: 80%;
+                line-height: 1.25;
+            }
+            .chaptertext p {
+                text-indent: 50px;
+            }
+            .start {
                 text-indent: 0px !important;
-                width: 75%;
-                margin-left: auto !important;
-                margin-right: auto !important;
             }
-            select, button {
-                font-family: 'Courier New', Courier, monospace;
+            .ribbon {
+                margin-top: 25px;
+                margin-left: 25px;
+            }
+            .next {
                 color: #0ff;
-                font-size: 18px;
-                background-color: #000;
-                border-color: #0ff;
-                text-align: center;
-
-                display: block;
-                justify-content: center;
-                align-items: center;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 10px;
-                padding: 10px 15px;
-                border: 1px solid #0ff;
-                border-radius: 5px;
-                transition: all 0.2s ease;
+                text-decoration: none;
+            }
+            .end {
+                font-size: 20px;
+                color: #0ff;
                 cursor: pointer;
             }
-            select {
-                height: 50px;
-                width: 300px;
-                margin-top: 50px;
+            .end a {
+                color: #0ff !important;
             }
-            button {
-                height: 50px;
-                width: 300px;
-                margin-bottom: 500px;
+            .end a:hover {
+                color: #fff;
             }
-            #returnMessage {
-                display: none;
+            .end a:after {
                 color: #0ff;
+            }
+            .poll {
+                margin-top: 50px;
+                padding: 50px 150px 50px 150px;
+                text-align: center;
             }
         </style>
     </head>
@@ -136,102 +126,85 @@
 
         <!--The chapter body-->
         <div class="pagecontent">
-            <p id="start">Earth was no more.</p>
-            <p>Nobody cared about that planet. It was always too hot or too cold, anything could kill you, the waters were dirty, and it was always in turmoil. One day, impending calamity struck the planet, revealing its inhabitants' true colors: Wicked, cruel, apathetic, and utterly hopeless. They fought and blamed each other, and they warred; as the weak tried to trample the strong, they were stepped upon instead; facts were muted and locked away, and only fantasy and distortion became reality for many.</p>
-            <p>Yet amongst such a terrible species was its finest people: The most excellent of talent and of heart.</p>
-            <p>Once disaster struck, with humanity's existence on the line, several men and women of wisdom, with the help of figures in authority of first-world nations and large companies, secretly collaborated on a project which could potentially save the human race from total extinction, although losses — losses at the level of risking lives and even whole communities — were excruciatingly great, yet inevitable.</p>
-            <p>This project was The A-2020, humanity's last hope. It was extremely sturdy, durable, and compact, like a time capsule made to survive decades, perhaps even centuries of whatever nature was to throw at it. Its hulls were made from the strongest of metal alloys, made to withstand every known danger of outer space, and tech on the ship was the best, most efficient and top-notch people could ever achieve with what they had.</p>
-            <p>Inside The A-2020 were several rooms serving different functions each; most notable were the two large, spacious titanium-walled halls in the centre where everyone gathered every morning. Its crew was composed of the last few people left alive, gathered from what was left of planet Earth. The crew passed time carefully; with their captain's leadership they planned the allocation of resources meticulously, and made sure everything was always in order, never chaos, and put their full effort into their work to sustain themselves and The A-2020. This was done for years.</p>
-            <p>Only then came one morning, the morning that started a change—no, a revolution.</p>
-            <p>"LINE IN ORDER, EVERYONE!" commanded The Captain, a serious man with a rigid, stern face and a squared-off beard. With a wave of his hand, eight people lined into two rows in the hall and faced him. "As the last survivors of the species Homo Sapiens, what is your duty?"</p>
-            <p>"To survive, to thrive, to create, and to procreate," they chanted in unison. "To fulfill our duties competently according to our occupation, and to satisfy the needs of other members on The A-2020, most importantly, The Captain."</p>
-            <p>"ATHLETE!" shouted The Captain with a quick huff. "What is your role?"</p>
-            <p>"To survive, to thrive, to create, and to procreate," said The Athlete. "To carry the crew's heavy loads, and to perform all labor-intensive tasks with my gift of strength and restlessness."</p>
-            <p>"Good," said The Captain. "And you, Economist! What is your role?"</p>
-            <p>"To survive, to thrive, to create, and to procreate," said The Economist. "To monitor the allocation of resources amongst all members of humanity in the most efficient manner possible."</p>
-            <p>"Good," said The Captain. "I—"</p>
-            <p>"I'M SO SORRY I'M LATE, SIR!" shouted The Engineer, rushing through the large hatch dividing the halls. "I've been routinely checking the security of the ship's hull and scanning our surrounding area! There is an asteroid heading in our direction, sir!"</p>
-            <p>"WHAT?" screeched The Captain.</p>
-            <p>"IT IS AN EMERGENCY, SIR!"</p>
-            <p>"How sure are you?" asked The Professor.</p>
-            <p>"It's very likely to collide—"</p>
-            <p>"WARNING. ASTEROID COLLISION IMMINENT. PLEASE TAKE PROTECTIVE MEASURES IMMEDIATELY," announced the loudspeaker.</p>
-            <p>The Captain froze in place and his legs shook. “I'm out of here!"</p>
-            <p>The Economist stepped in his direction. "You—"</p>
-            <p>"What 'protective measures' are there?" The Athlete panicked as The Engineer ran off behind her.</p>
-            <p>“Huh?” asked the lethargic Pilot, limping in from the crew quarters. “What’s going on—”</p>
-            <p>"Don't panic, everyone!" shouted The Doctor, keeping a wide stance as she breathed.</p>
-            <p>“Doc!” shouted a girl.</p>
-            <p>She turned around and peered across from where she was. The Chef, a short, young, and slightly frail woman limped out from a hatch on a diagonal wall. “What—”</p>
-            <p>“Go rest, Chef," she spoke. "I’ll figure something out—”</p>
-            <p>"Engineer, how long should we have before this asteroid collides?"</p>
-            <p>"We should have approximately ten minutes!" he answered, stopping by the gateway between the halls. "Pilot, cockpit! Let's see if we can steer away from the asteroid!" he continued, running. The Pilot followed without hesitation.</p>
-            <p>"Hey, I'm your physics teacher, dammit!" shouted The Professor, chasing after them. "Let me help!"</p>
-            <p>"Professor, you better go with The Pilot! I'll go check the engines," commanded The Engineer before running off.</p>
-            <p>"Everyone, let's all be calm. We should have about nine minutes left," said The Soldier.</p>
-            <p>"We should access the emergency space suits The Doctor tailored in case something like this would happen," suggested The Economist.</p>
-            <p>"What about the ship?" asked The Athlete.</p>
-            <p>"If it’s strong enough to obliterate this ship, we can’t do much, can we?" said The Economist. "Anyway, our lives come first! Everyone, to the crew quarters! Chef, come with us!"</p>
-            <p>“Soldier, could you carry The Chef?” requested The Doctor.</p>
-            <p>The Chef was petite and small enough to be carried on one shoulder; she clung on to his back. They all started running. "Economist, what are we gonna do if the asteroid hits The 2020?" asked The Journalist. "Is it all over?"</p>
-            <p>"I can’t say," The Economist admitted.</p>
-            <p>"D-Detective?" asked The Chef.</p>
-            <p>"Don't ask me," The Detective replied. "I wouldn't know either, and I don't want to.”</p>
-            <p>"If it hits us, if we're not in the space suits, then we may die only seconds after the hull is breached," stated The Doctor. "That's why it's important we put them on as fast as possible!"</p>
-            <p>"Aren't we dead either way?" said The Journalist.</p>
-            <p>The Doctor gave out a heavy exhale. "No, a small dent can still damage the systems, just not enough to spell doom, and if—"</p>
-            <p>"What if we are hit hard anyway?" panicked The Athlete. "What will we—"</p>
-            <p>“Is this really the time to be worrying about this?” asked The Musician. “We’re gonna die! We gotta move first!”</p>
-            <p>"Athlete, shouldn't you be accustomed to fast-paced situations like these?" said The Economist.</p>
-            <p>"No, I'm not! I'm not as talented as you guys are! And I'm just 16! I've never—"</p>
-            <p>"Let's stay focused!" shouted The Doctor.</p>
-            <p>"ASTEROID COLLISION IMMINENT. PLEASE TAKE PROTECTIVE MEASURES IMMEDIATELY."</p>
-            <p>Soon they began to lose their balance. Though The Pilot often turned the ship slowly enough no one could feel it, this time it was more unsteady, more sudden. "It can't be helped," they all thought, and they pushed through.</p>
-            <p>"Quickly!" screeched The Doctor. "It's under your beds!"</p>
-            <p>They scavenged underneath their mattresses. The Athlete and The Doctor were the first to suit up.</p>
-            <p>"Doc... it's hard to... breathe... in..." whimpered The Chef.</p>
-            <p>"Can you breathe?”</p>
-            <p>She inhaled. “I can… thank you.”</p>
-            <p>“Athlete, get one for The Captain! He's in his room!" shouted The Doctor. "Everyone else, get suits for the three currently in the cockpit!"</p>
-            <p>"What did you say?"</p>
-            <p>"No, don't!" refused The Economist, fitting his hands into a pair of white gloves. "They're steering the ship away from the threat, you potato nugget! Putting on the suits takes time, and we shouldn't waste their time!"</p>
-            <p>“Detective, do you need help with that?” asked The Musician, holding up an oxygen tank by the side.</p>
-            <p>“No need, thank you—”</p>
-            <p>"Athlete, deliver this to The Captain ASAP!" shouted The Soldier, tossing a spare.</p>
-            <p>"W-Wait—"</p>
-            <p>"DISASTER AVERTED," said the loudspeaker.</p>
+            <div class="chaptertext">
+                <p class="start">Earth was no more.</p>
+                <p>Nobody cared about that planet. It was always too hot or too cold, anything could kill you, the waters were dirty, and it was always in turmoil. One day, impending calamity struck the planet, revealing its inhabitants' true colors: Wicked, cruel, apathetic, and utterly hopeless. They fought and blamed each other, and they warred; as the weak tried to trample the strong, they were stepped upon instead; facts were muted and locked away, and only fantasy and distortion became reality for many.</p>
+                <p>Yet amongst such a terrible species was its finest people: The most excellent of talent and of heart.</p>
+                <p>Once disaster struck, with humanity's existence on the line, several men and women of wisdom, with the help of figures in authority of first-world nations and large companies, secretly collaborated on a project which could potentially save the human race from total extinction, although losses — losses at the level of risking lives and even whole communities — were excruciatingly great, yet inevitable.</p>
+                <p>This project was The A-2020, humanity's last hope. It was extremely sturdy, durable, and compact, like a time capsule made to survive decades, perhaps even centuries of whatever nature was to throw at it. Its hulls were made from the strongest of metal alloys, made to withstand every known danger of outer space, and tech on the ship was the best, most efficient and top-notch people could ever achieve with what they had.</p>
+                <p>Inside The A-2020 were several rooms serving different functions each; most notable were the two large, spacious titanium-walled halls in the centre where everyone gathered every morning. Its crew was composed of the last few people left alive, gathered from what was left of planet Earth. The crew passed time carefully; with their captain's leadership they planned the allocation of resources meticulously, and made sure everything was always in order, never chaos, and put their full effort into their work to sustain themselves and The A-2020. This was done for years.</p>
+                <p>Only then came one morning, the morning that started a change—no, a revolution.</p>
+                <div class="scenebreak">|||│▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░│|||</div>
+                <p class="start">"LINE IN ORDER, EVERYONE!" commanded The Captain, a serious man with a rigid, stern face and a squared-off beard. With a wave of his hand, eight people lined into two rows in the hall and faced him. "As the last survivors of the species Homo Sapiens, what is your duty?"</p>
+                <p>"To survive, to thrive, to create, and to procreate," they chanted in unison. "To fulfill our duties competently according to our occupation, and to satisfy the needs of other members on The A-2020, most importantly, The Captain."</p>
+                <p>"ATHLETE!" shouted The Captain with a quick huff. "What is your role?"</p>
+                <p>"To survive, to thrive, to create, and to procreate," said The Athlete. "To carry the crew's heavy loads, and to perform all labor-intensive tasks with my gift of strength and restlessness."</p>
+                <p>"Good," said The Captain. "And you, Economist! What is your role?"</p>
+                <p>"To survive, to thrive, to create, and to procreate," said The Economist. "To monitor the allocation of resources amongst all members of humanity in the most efficient manner possible."</p>
+                <p>"Good," said The Captain. "I—"</p>
+                <p>"I'M SO SORRY I'M LATE, SIR!" shouted The Engineer, rushing through the large hatch dividing the halls. "I've been routinely checking the security of the ship's hull and scanning our surrounding area! There is an asteroid heading in our direction, sir!"</p>
+                <p>"WHAT?" screeched The Captain.</p>
+                <p>"IT IS AN EMERGENCY, SIR!"</p>
+                <p>"How sure are you?" asked The Professor.</p>
+                <p>"It's very likely to collide—"</p>
+                <p>"WARNING. ASTEROID COLLISION IMMINENT. PLEASE TAKE PROTECTIVE MEASURES IMMEDIATELY," announced the loudspeaker.</p>
+                <p>The Captain froze in place and his legs shook. "I'm out of here!"</p>
+                <p>The Economist stepped in his direction. "You—"</p>
+                <p>"What 'protective measures' are there?" The Athlete panicked as The Engineer ran off behind her.</p>
+                <p>"Huh?” asked the lethargic Pilot, limping in from the crew quarters. "What’s going on—”</p>
+                <p>"Don't panic, everyone!" shouted The Doctor, keeping a wide stance as she breathed.</p>
+                <p>"Doc!” shouted a girl.</p>
+                <p>She turned around and peered across from where she was. The Chef, a short, young, and slightly frail woman limped out from a hatch on a diagonal wall. "What—”</p>
+                <p>"Go rest, Chef," she spoke. "I’ll figure something out—”</p>
+                <p>"Engineer, how long should we have before this asteroid collides?"</p>
+                <p>"We should have approximately ten minutes!" he answered, stopping by the gateway between the halls. "Pilot, cockpit! Let's see if we can steer away from the asteroid!" he continued, running. The Pilot followed without hesitation.</p>
+                <p>"Hey, I'm your physics teacher, dammit!" shouted The Professor, chasing after them. "Let me help!"</p>
+                <p>"Professor, you better go with The Pilot! I'll go check the engines," commanded The Engineer before running off.</p>
+                <p>"Everyone, let's all be calm. We should have about nine minutes left," said The Soldier.</p>
+                <p>"We should access the emergency space suits The Doctor tailored in case something like this would happen," suggested The Economist.</p>
+                <p>"What about the ship?" asked The Athlete.</p>
+                <p>"If it’s strong enough to obliterate this ship, we can’t do much, can we?" said The Economist. "Anyway, our lives come first! Everyone, to the crew quarters! Chef, come with us!"</p>
+                <p>"Soldier, could you carry The Chef?” requested The Doctor.</p>
+                <p>The Chef was petite and small enough to be carried on one shoulder; she clung on to his back. They all started running. "Economist, what are we gonna do if the asteroid hits The 2020?" asked The Journalist. "Is it all over?"</p>
+                <p>"I can’t say," The Economist admitted.</p>
+                <p>"D-Detective?" asked The Chef.</p>
+                <p>"Don't ask me," The Detective replied. "I wouldn't know either, and I don't want to.”</p>
+                <p>"If it hits us, if we're not in the space suits, then we may die only seconds after the hull is breached," stated The Doctor. "That's why it's important we put them on as fast as possible!"</p>
+                <p>"Aren't we dead either way?" said The Journalist.</p>
+                <p>The Doctor gave out a heavy exhale. "No, a small dent can still damage the systems, just not enough to spell doom, and if—"</p>
+                <p>"What if we are hit hard anyway?" panicked The Athlete. "What will we—"</p>
+                <p>"Is this really the time to be worrying about this?” asked The Musician. "We’re gonna die! We gotta move first!”</p>
+                <p>"Athlete, shouldn't you be accustomed to fast-paced situations like these?" said The Economist.</p>
+                <p>"No, I'm not! I'm not as talented as you guys are! And I'm just 16! I've never—"</p>
+                <p>"Let's stay focused!" shouted The Doctor.</p>
+                <p>"ASTEROID COLLISION IMMINENT. PLEASE TAKE PROTECTIVE MEASURES IMMEDIATELY."</p>
+                <p>Soon they began to lose their balance. Though The Pilot often turned the ship slowly enough no one could feel it, this time it was more unsteady, more sudden. "It can't be helped," they all thought, and they pushed through.</p>
+                <p>"Quickly!" screeched The Doctor. "It's under your beds!"</p>
+                <p>They scavenged underneath their mattresses. The Athlete and The Doctor were the first to suit up.</p>
+                <p>"Doc... it's hard to... breathe... in..." whimpered The Chef.</p>
+                <p>"Can you breathe?”</p>
+                <p>She inhaled. "I can… thank you.”</p>
+                <p>"Athlete, get one for The Captain! He's in his room!" shouted The Doctor. "Everyone else, get suits for the three currently in the cockpit!"</p>
+                <p>"What did you say?"</p>
+                <p>"No, don't!" refused The Economist, fitting his hands into a pair of white gloves. "They're steering the ship away from the threat, you potato nugget! Putting on the suits takes time, and we shouldn't waste their time!"</p>
+                <p>"Detective, do you need help with that?” asked The Musician, holding up an oxygen tank by the side.</p>
+                <p>"No need, thank you—”</p>
+                <p>"Athlete, deliver this to The Captain ASAP!" shouted The Soldier, tossing a spare.</p>
+                <p>"W-Wait—"</p>
+                <p>"DISASTER AVERTED," said the loudspeaker.</p>
+            </div>
+
+            <div class="ribbon">
+                <a href="MD-CHAPTERLIST.html" class="next">&gt; Return to Chapter List</a>
+                <br><br>
+                <a href="404.html" class="next">&gt; Next Chapter</a>
+            </div>
         </div>
 
         <div class="poll">
-            <form>
-                <label>
-                    <p>You have reached the end of the chapter. Please select one option from the dropdown menu below.</p>
-                    <p>Please note that you cannot change your vote after pressing SUBMIT, and that only ONE vote is allowed per IP address.</p>
-                </label>
-                <select name="crewmate" id="crewmates">
-                    <option class="option" value="Athlete" selected>The Athlete</option>
-                    <option class="option" value="Captain">The Captain</option>
-                    <option class="option" value="Chef">The Chef</option>
-                    <option class="option" value="Detective">The Detective</option>
-                    <option class="option" value="Doctor">The Doctor</option>
-                    <option class="option" value="Economist">The Economist</option>
-                    <option class="option" value="Engineer">The Engineer</option>
-                    <option class="option" value="Journalist">The Journalist</option>
-                    <option class="option" value="Musician">The Musician</option>
-                    <option class="option" value="Pilot">The Pilot</option>
-                    <option class="option" value="Professor">The Professor</option>
-                    <option class="option" value="Soldier">The Soldier</option>
-                </select>
-
-                <button class="submit" id="submit" onclick="submitVote()">Submit</button>
-            </form>
-        </div>
-
-        <div>
-            <p id="returnMessage"></p>
+            <span class="end">Congrats! You've reached the end of the chapter. Click <a href='https://strawpoll.com/polls/YVyPmO6YAnN' target='_blank'>HERE</a> to vote for the next chapter's point character.</span>
         </div>
 
         <script type="module" src="sidebar.js"></script>
-        <script type="module" src="poll.js"></script>
     </body>
 </html>

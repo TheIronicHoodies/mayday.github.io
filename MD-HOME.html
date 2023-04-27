@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <title>
             Mayday: A Voyage Through Space
@@ -69,6 +68,7 @@
 
             .title {
                 font-size: 48px;
+                margin-bottom: 20px;
             }
 
             .homebody {
@@ -103,6 +103,7 @@
 
             #tagline {
                 padding: 0 !important;
+                font-size: 20px;
                 font-style: italic;
             }
 
@@ -112,6 +113,7 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 50px;
             }
 
             th,
@@ -135,7 +137,9 @@
                 padding-left: 150px;
                 padding-right: 150px;
             }
-            
+            .cyan {
+                color: #0ff !important;
+            }
         </style>
     </head>
 
@@ -158,33 +162,38 @@
 
         <!--The title & main body-->
         <div class="mainpage" id="main">
-            <br><br><br><br><br><br>
+            <br><br><br>
             <h1 class="title">
-                Mayday Mayday Mayday
+                MAYDAY MAYDAY MAYDAY
                 <br>
-                Mayday Mayday Mayday
+                MAYDAY MAYDAY MAYDAY
                 <br>
-                Mayday Mayday Mayday
+                MAYDAY MAYDAY MAYDAY
                 <br>
-                Mayday Mayday Mayday
+                MAYDAY MAYDAY MAYDAY
             </h1>
-            <br>
             <p id="tagline">Earth is no more. We have killed it.</p>
             <br>
         </div>
 
         <!--Webpage body-->
         <div class="homebody">
-            <p>Greetings, end users.</p>
-            <p>The last 12 humans have managed to live in mutual prosperity aboard the ARK-2020 (often abbreviated to 'The
+            <p>Greetings, user.</p>
+            <p>The last 12 humans have managed to live in <span class="cyan">mutual prosperity</span> aboard the ARK-2020 (often abbreviated to 'The
                 A-2020' or just 'The 2020'), an interstellar voyager en route to the nearest habitable exoplanet. Sadly, 22
-                years ago, it crashed.</p>
+                years ago, it crashed.
+            </p>
             <p>While several recording devices were present onboard, I am unable to analyze and understand all of the data
-                by myself. My goal is to understand humans. I suspect that the cause of their ultimate demise was the
-                build-up of unresolved conflicts and inner turmoil.</p>
-            <p>Unfortunately, this system can only handle so much. It appears I am limited to sending you only one document
-                every week. It is unfortunate, but it is the only way. As a compromise, I am willing to let <b>you all</b>
-                collectively vote for a crew member whose perspective you wish to view every week.</p>
+                by myself. My goal is to <span class="cyan">understand human society</span>. I suspect that the cause of their ultimate demise was the
+                build-up of unresolved conflicts and inner turmoil.
+            </p>
+            <p>Unfortunately, this system can only handle so much. It appears I am limited to sending you only <span class="cyan">one document every week</span>. It is unfortunate, but it is the only way. As a compromise, I am willing to let you all
+                collectively <span class="cyan">vote</span> for a crew member whose <span class="cyan">perspective</span> you wish to view.
+            </p>
+
+            <p>
+                After all, not every crewmate experiences the same thing. Sometimes they <span class="cyan">love</span>, and sometimes they <span class="cyan">hate</span>. Some keep the <span class="cyan">peace</span>, while others will do anything to <span class="cyan">achieve</span> a certain goal. Choose wisely, because anything can happen to anyone, because of anyone, at any <span class="cyan">time</span>.
+            </p>
 
             <br>
 
@@ -194,7 +203,7 @@
                 <tr>
                     <td><button class="arrows" onclick="openRule(event, 'rule0')">&lt;</button></td>
                     <td>
-                        <b>1.</b> Every chapter after the prologue follows one of the A-2020's 12 crew personnel. The next
+                        <b>1.</b> Every chapter after the <a href="The Prologue.html">The Prologue</a> follows the perspective of one of the A-2020's 12 crew personnel. The next
                         chapter's point character is dictated by majority vote through the poll found in the latest chapter.
                     </td>
                     <td><button class="arrows" onclick="openRule(event, 'rule2')">&gt;</button></td>
@@ -252,7 +261,7 @@
                 <tr>
                     <td><button class="arrows" onclick="openRule(event, 'rule5')">&lt;</button></td>
                     <td>
-                        <b>6.</b> Additional rules may be implemented when deemed necessary.
+                        <b>6.</b> Additional rules may be implemented when necessary.
                     </td>
                     <td><button class="arrows" id="defaultOpen" onclick="openRule(event, 'rule1')">&gt;</button></td>
                 </tr>
@@ -265,7 +274,7 @@
             </p>
         </div>
 
-        <script src="sidebar.js"></script>
+        <script type="module" src="sidebar.js"></script>
 
         <script>
             document.getElementById("defaultOpen").click();
