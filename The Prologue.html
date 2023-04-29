@@ -8,7 +8,7 @@
             }
             .sidebar {
                 height: 100%;
-                width: 305px;
+                width: 310px;
                 position: fixed;
                 z-index: 1;
                 top: 50px;
@@ -32,9 +32,9 @@
             .sidebar a:link {
                 text-decoration: none;
             }
-            .sidebar:hover {
+            /* .sidebar:hover {
                 left: 0px;
-            }
+            } */
             .sidebar .sidebuttons {
                 border-top: 1px solid #0ff;
                 border-bottom: 1px solid #0ff;
@@ -103,7 +103,7 @@
     </head>
     <body style="background-color: #000">
         <!--The sidebar-->
-        <div class="sidebar" id="sidemenu">
+        <div class="sidebar" id="sidemenu" onclick="openSideBar()">
             <div id="sideicons">
                 <h1 style="text-align: center">Menu</h1>
                 <a href="MD-HOME.html" class="sidebuttons">Home</a>

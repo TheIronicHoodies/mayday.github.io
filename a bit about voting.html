@@ -1,30 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mayday: Blog and Updates</title>
+        <title></title>
         <style>
             * {
                 font-family: 'Courier New', Courier, monospace;
             }
-            input {
-                font-size: 18px;
-                color: #0ff;
-                background-color: #000;
-                display: inline;
-                margin-top: 50px;
-                margin-left: 75px;
-                border: 1px solid #0ff;
-                border-radius: 5px;
-                padding: 10px;
-                width: 1000px;
-            }
-            ::placeholder {
+            p {
                 color: #fff;
-            }
-            li {
-                margin-left: 75px;
-                padding-top: 25px;
-                display: flex;
                 font-size: 18px;
             }
             .sidebar {
@@ -43,6 +26,7 @@
                 border-radius: 0 10px 10px 0;
                 color: #0ff;
             }
+
             .sidebar a {
                 color: #0ff;
                 font-size: 24px;
@@ -50,12 +34,20 @@
                 padding: 10px;
                 text-align: right;
             }
+
             .sidebar a:link {
                 text-decoration: none;
             }
+
+            .sidebar a:visited {
+                color: #0ff;
+                text-decoration: none;
+            }
+
             .sidebar:hover {
                 left: 0px;
             }
+
             .sidebar .sidebuttons {
                 border-top: 1px solid #0ff;
                 border-bottom: 1px solid #0ff;
@@ -65,25 +57,15 @@
             }
             .titlebox {
                 color: #0ff;
-                font-size: 24px;
+                font-size: 24px !important;
                 text-align: center;
                 border-bottom: 2px solid #0ff;
-            }
-            a:link, a:visited, a:hover {
-                color: #0ff;
-                text-decoration: none;
-            }
-            #body {
-                margin-top: 25px;
-            }
-            .new {
-                color: #ff0 !important;
             }
         </style>
     </head>
     <body style="background-color: #000">
-        <!--The sidebar-->
-        <div class="sidebar" id="sidemenu">
+         <!--The sidebar-->
+         <div class="sidebar" id="sidemenu">
             <div id="sideicons">
                 <h1 style="text-align: center">Menu</h1>
                 <a href="MD-HOME.html" class="sidebuttons">Home</a>
@@ -104,16 +86,24 @@
             <h1>Blog & Updates</h1>
         </div>
 
-        <input type="text" id="userInput" onkeyup="sortList()" placeholder="Search for a date / title and click on an entry to browse.">
-
-        <div id="body">
-            <ul id="entries">
-                <li><a href="the beginning.html" class="new"><b>[NEW] May 1, 2023:</b> A Bit About Voting</a></li>
-                <li><a href="the beginning.html" class="new"><b>[NEW] May 1, 2023:</b> The Beginning</a></li>
-            </ul>
+        <div>
+            <p>
+                Hi folks! Here's a tad more info about the voting process:
+            </p>
+            <p>
+                Even among people I know, everyone's votes are kept completely anonymous, and the poll at the end of a chapter is the only people can get votes in to ensure fairness. I'll let y'all flatter me in my email and DMs, but it's not going to change anything. ;3
+            </p>
+            <p>
+                As of now, I'm using Strawpoll as a means for people to vote, but once it's done I'll be using a built-in poll instead. I'll let you know when that's up and ready.
+            </p>
+            <p>
+                I've let it come back from the dead as a web serial instead of a novella, with the unique quirk that readers have the power to choose which character's perspective they want to see next. It might be interesting to see who people vote for, and why. Is it because this crewmate is sus? Maybe you find them relatable? Or maybe you and your friends want to vote somebody for the lols? (Click <a href="a bit about voting.html">here</a> if you'd like to know more!)
+            </p>
+            <p>
+                I hope my efforts pay off, and that everyone enjoys reading this story. ^U^ Have fun, be nice to each other, and vote if you haven't already. :D
+            </p>
         </div>
 
-        <script type="module" src="sidebar.js"></script>
-        <script src="sort.js"></script>
+        <script src="sidebar.js"></script>
     </body>
 </html>
