@@ -1,4 +1,4 @@
-function editlatest() {
-    document.getElementById("latest").href = "a bit about voting.html";
+function editlatestb() {
+    document.getElementById("latestb").href = "a bit about voting.html";
     return false;
 }

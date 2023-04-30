@@ -1,4 +1,4 @@
-var countdownDate = new Date("May 08, 2023 12:00:00").getTime(); // Countdown until date
+var countdownDate = new Date("May 08, 2023 13:00:00").getTime(); // Countdown until date
 
 // Runs countdown every second
 var countdown = setInterval(function() {
