@@ -25,11 +25,12 @@
                 padding-right: 150px;
             }
             .buttonContainer {
-                float: right;
                 display: flex;
-                padding-top: 20px;
-                padding-right: 235px;
+                align-self: center;
+                justify-content: center;
+                margin-top: 20px;
                 margin-bottom: 25px;
+                padding: 10px;
                 color: #0ff;
             }
             .buttonContainer button {
@@ -40,7 +41,8 @@
                 font-family: inherit;
                 font-size: 24px;
                 padding: 10px;
-                margin: 5px;
+                margin-left: 5px;
+                height: 50px;
                 width: 50px;
                 display: inline-block;
                 cursor: pointer;
@@ -48,6 +50,23 @@
             .buttonContainer button.active {
                 background-color: #0ff;
                 color: #000;
+            }
+            #latestc {
+                font-size: 20px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            #latestc:visited {
+                color: #0ff;
+            }
+            #latest {
+                border: 1px solid #0ff;
+                height: 25px;
+                width: 500px;
+                margin-top: 5px;
+                margin-right: 105px;
+                padding: 10px;
+                display: inline-block;
             }
             .chapters {
                 color: #0ff;
@@ -118,24 +137,6 @@
             .filename {
                 text-align: center;
             }
-            #latestc {
-                font-size: 20px;
-                font-weight: bold;
-                text-decoration: none;
-            }
-            #latestc:visited {
-                color: #0ff;
-            }
-            #latest {
-                border: 1px solid #0ff;
-                height: 25px;
-                width: 500px;
-                padding: 10px;
-                margin-left: 240px;
-                margin-top: 28px;
-                margin-bottom: 25px;
-                display: inline-block;
-            }
             .table {
                 margin-bottom: 250px;
             }
@@ -175,12 +176,12 @@
 
         <br>
 
-        <div id="latest">
-            <a href="" id="latestc" onclick="editlatestc()">Shortcut to the latest chapter</a>
-        </div>
-
         <!--Sort by alphabetical list/grid view-->
         <div class="buttonContainer">
+            <div id="latest">
+                <a href="" id="latestc" onclick="editlatestc()">Shortcut to the latest chapter</a>
+            </div>
+
             <button class="sortBtn" onclick="openProfile(event,'list')" id="defaultOpen"><i class="fa fa-list"></i></button>
             <button class="sortBtn" onclick="openProfile(event,'grid')"><i class="fa fa-th-large"></i></button>
         </div>
