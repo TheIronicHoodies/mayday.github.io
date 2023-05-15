@@ -1,4 +1,4 @@
 function editlatestf() {
-    document.getElementById("latestf").href = "favicon_chef.ico";
+    document.getElementById("latestf").href = "";
     return false;
 }

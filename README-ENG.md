@@ -18,7 +18,7 @@ Mayday: A Voyage Through Space is an interactive web serial hosted via GitHub th
 
 2. "If a crew member is asleep, unconscious, or deceased by the time the next chapter starts, they are ineligible to win." 
 
-3. "Ineligible crew members won't always immediately be removed as a poll option." This ensures that readers will not be spoiled should a character have been killed or rendered unconscious outside the currently published chapters. Therefore, should a reader vote for an ineligible, yet selectable character, their vote will be rendered NULL.
+3. "Ineligible crew members won't always immediately be removed as a poll option." This ensures that readers will not be spoiled should a character have been killed or rendered unconscious outside currently published chapters. Should a reader vote for an ineligible, yet selectable character, their vote will be rendered NULL.
 
 4. "If two or more crew members tie for the vote, one will be chosen at random."
 
@@ -28,14 +28,16 @@ B. HOME
 
 HOME contains the premise and rules of the web serial. It also secondarily contains a hyperlink to the latest chapter for quicker access, and any important updates should they arise.
 
-The twelve MAYDAYs in the page header fade one by one when characters are revealed to have died.
-
 C. CHAPTER LIST
 
 CHAPTER LIST is a navigation page for all published chapters. They may be sorted by character through List view, or sorted by number through Grid view. At the top is a link to the latest released chapter for easier navigation. 
 
 The header contains a countdown to the next chapter. The site does not automatically update upon reaching zero, and chapters may not release as soon as the countdown reaches 0:00:00:00. However, it does prevent further, 'late' votes from entering the system.
 
-D. BLOG / UPDATE
+D. BLOG / UPDATES
+
+This page is used to update end-users on any bug fixes and/or QOL improvements, make announcements in regards to contingencies or events, or anything else they feel is necessary. 
+
+E. CREDITS
 
 INCOMPLETE; TO BE UPDATED
