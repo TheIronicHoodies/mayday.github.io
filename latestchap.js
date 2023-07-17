@@ -1,4 +1,4 @@
 function editlatestc() {
-    document.getElementById("latestc").href = "soldier-viii.html";
+    document.getElementById("latestc").href = "pilot-x.html";
     return false;
 }
