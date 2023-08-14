@@ -1,4 +1,4 @@
 function editlatestc() {
-    document.getElementById("latestc").href = "doctor-xii.html";
+    document.getElementById("latestc").href = "professor-xiii.html";
     return false;
 }
